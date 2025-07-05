@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" href="../Introduce/picture/515672276_1315136376643411_4767108449727489919_n.jpg">
+    <link rel="stylesheet" href="css/header.css">
     <title>Introduce web</title>
 </head>
 <body>
@@ -13,14 +14,23 @@
         <nav class="header-nav">
             <ul>
                 <li><a href="/Introduce/Header/About.html"  id="about">About</a></li>
-                <li><a href="/Introduce/Header/Skill.html"  >Skill</a></li>
+                <li><a href="/Introduce/Header/Skill.html"  id="skill">Skill</a></li>
                 <li><a href="/Introduce/Header/Project.html">Project</a></li>
                 <li><a href="contact">contect</a></li>
             </ul>
         </nav>
+
+
+        <div class="Theme-toggles">
+        <button id="theme-toggle" class="Theme-button" onclick="toggleTheme()">
+            Theme
+        </button>
+        </div>
+
+
     </header>
 
-    <main>
+    <main id="content">
         <section>
             <h2>Welcome to My Website</h2>
             <p>This is a simple introduction to my web development project.</p>
@@ -30,7 +40,8 @@
     <footer>
         <p>&copy; 2023 Narachai. All rights reserved.</p>
     </footer>
-</body>
 
 <script src="../Introduce/js/feature.js"></script>
+</body>
+
 </html>
