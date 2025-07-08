@@ -2,10 +2,19 @@ header {
     display: flex;
     background-color: #f4f4f4;
     padding: 20px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
+
+    .side-bar {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 10px;
+        }
+    }
 
     .Theme-toggles {
-        margin-left: auto;
 
         width: 60px;
         height: 30px;
@@ -14,7 +23,6 @@ header {
         position: relative;
 
         .toggle-knob {
-
             width: 24px;
             height: 24px;
             background-color: #fff;
@@ -26,11 +34,11 @@ header {
         }
     }
 
-    .Theme-toggles:active {
+    .Theme-toggles.active {
         background-color: #151030;
     }
 
-    .Theme-toggles:active .toggle-knob {
+    .Theme-toggles.active .toggle-knob {
         transform: translateX(30px);
     }
 
@@ -43,6 +51,15 @@ header {
     }
 
 }
+
+header.toggle {
+    background-color: #333;
+}
+
+a.fontwhite {
+    color: #fafafa;
+}
+
 
 body.dark-mode {
     background-color :#333;
