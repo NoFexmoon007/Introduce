@@ -2,7 +2,7 @@ header {
     display: flex;
     background-color: #f4f4f4;
     padding: 20px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
 
     .side-bar {
         margin-left: auto;
@@ -23,7 +23,6 @@ header {
         position: relative;
 
         .toggle-knob {
-
             width: 24px;
             height: 24px;
             background-color: #fff;
