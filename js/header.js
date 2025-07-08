@@ -1,6 +1,4 @@
 const toggleButton = document.getElementById('Theme-toggles');
-
-
 const body = document.body;
 
 function switchTheme() {
