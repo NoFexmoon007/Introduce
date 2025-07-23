@@ -1,26 +1,249 @@
+/*
 header {
     display: flex;
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
 
-    .side-bar {
-        margin-left: auto;
+
+    
+    .search-bar {
         display: flex;
         align-items: center;
 
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+
+            i {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+            }
+
+            &:hover {
+                background-color: #000000;
+            }
+
+            i:hover {
+                color: #ffffff;
+            }
+        }
+
+        .search-bar.dark-mode {
+            display: flex;
+            align-items: center;
+
+            input[type="text"].dark-mode {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                width: 200px;
+            }
+
+            button.dark-mode {
+                padding: 10px 15px;
+                margin-left: 10px;
+                background-color: #f4f4f4;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+
+                i {
+                    color: black;
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+
+
+
+        
+        .side-bar {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+
+            p {
+                margin: 10px;
+            }
+        }
+
+        .Theme-toggles {
+
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 15px;
+            position: relative;
+
+            .toggle-knob {
+                width: 24px;
+                height: 24px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 3px;
+                left: 3px;
+
+            }
+        }
+
+        .Theme-toggles.active {
+            background-color: #151030;
+        }
+
+        .Theme-toggles.active .toggle-knob {
+            transform: translateX(30px);
+        }
+
+        .toggle-knob {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .Theme-toggles {
+            transition: background-color 0.3s ease;
+        }
+
+    }
+
+    header.deark-mode {
+        background-color: #333;
+    }
+
+    a.fontwhite {
+        color: #fafafa;
+    }
+
+
+    body.dark-mode {
+        background-color: #333;
+        color: #fafafa;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            margin-right: 20px;
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+
+    h1 {
+        padding: 0px;
+        margin: 0%;
+    }
+}
+
+*/
+
+
+header {
+    display: flex;
+    align-items: center;          /* เพิ่ม: จัดให้ทุกอย่างอยู่กึ่งกลางแนวตั้ง */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
+
+    /* Nav Links Styling */
+    ul {
+        display: flex;
+        padding: 0 0 0 0; /* เพิ่ม: ลบ padding เริ่มต้นของ ul */
+        margin: 0 0 0 40px;  /* เพิ่ม: ลบ margin เริ่มต้นของ ul */
+        li {
+            list-style: none;
+            margin-right: 20px;
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+
+    /* Search Bar Styling (โค้ดส่วนนี้ถูกต้องแล้ว) */
+    .search-bar {
+        display: flex;
+        align-items: center;
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* เพิ่ม transition ที่นี่ */
+
+            i {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                transition: color 0.3s ease; /* เพิ่ม transition ที่นี่ */
+            }
+
+            &:hover {
+                background-color: #000000;
+            }
+             /* ทำให้ไอคอนเปลี่ยนสีเมื่อ hover ที่ปุ่ม */
+            &:hover i {
+                color: #ffffff;
+            }
+        }
+    }
+
+    /* -------------------------------------------------- */
+    /* Side Bar / Theme Toggle - ย้ายออกมาไว้ตรงนี้ครับ!  */
+    /* -------------------------------------------------- */
+    .side-bar {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* ใช้ margin-left: auto; เพื่อจัดให้ side-bar อยู่ทางขวา */
+        /* ไม่จำเป็นต้องใช้ margin-left: auto; แล้วเพราะ header ใช้ justify-content */
+   
         p {
-            margin: 10px;
+            margin: 0 10px 0 0; /* ปรับ margin เล็กน้อย */
         }
     }
 
     .Theme-toggles {
-
         width: 60px;
         height: 30px;
         background-color: #ccc;
         border-radius: 15px;
         position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
         .toggle-knob {
             width: 24px;
@@ -30,10 +253,10 @@ header {
             position: absolute;
             top: 3px;
             left: 3px;
-
+            transition: transform 0.3s ease-in-out;
         }
     }
-
+    
     .Theme-toggles.active {
         background-color: #151030;
     }
@@ -42,45 +265,33 @@ header {
         transform: translateX(30px);
     }
 
-    .toggle-knob {
-        transition: transform 0.3s ease-in-out;
+    /* Dark Mode Global Styles */
+    header.dark-mode {
+        background-color: #333;
     }
 
-    .Theme-toggles {
-        transition: background-color 0.3s ease;
+    body.dark-mode {
+        background-color: #333;
+        color: #fafafa;
+    }
+    
+    body.dark-mode a {
+      color: #fafafa;
     }
 
-}
 
-header.toggle {
-    background-color: #333;
-}
-
-a.fontwhite {
-    color: #fafafa;
-}
-
-
-body.dark-mode {
-    background-color :#333;
-    color: #fafafa;
-}
-
-ul {
-    display: flex;
-
-    li {
-        list-style: none;
-        margin-right: 20px;
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+    /*search bar dark mode*/
+    .search-bar.dark-mode {
+        background: #222;
     }
-}
 
-h1 {
-    padding: 0px;
-    margin: 0%;
+    .search-bar input.dark-mode {
+        background: #333;
+        color: #fafafa;
+    }
+
+    .search-bar button.dark-mode {
+        background: #444;
+        color: #fafafa;
+    }
 }

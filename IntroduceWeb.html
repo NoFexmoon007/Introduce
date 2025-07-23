@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" href="../Introduce/picture/515672276_1315136376643411_4767108449727489919_n.jpg">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Introduce web</title>
 </head>
 
@@ -22,6 +23,17 @@
             </ul>
         </nav>
 
+        <!-- Search Bar -->
+        <div class="search-bar" id="SearchBar">
+            <form action="" id="search-form">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button type="submit" id="search-button"> <i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div id="search-results"></div>
+
+        <!-- Theme Toggle -->
         <div class="side-bar">
             <p>Theme-toggles</p>
             <div class="Theme-toggles" id="Theme-toggles">
@@ -35,6 +47,7 @@
         <section>
             <h2>Welcome to My Website</h2>
             <p>This is a simple introduction to my web development project.</p>
+
         </section>
     </main>
 
@@ -42,6 +55,7 @@
         <p>&copy; 2023 Narachai. All rights reserved.</p>
     </footer>
 
+    <script src="../Introduce/js/search.js"></script>
     <script src="../Introduce/js/header.js"></script>
 </body>
 
