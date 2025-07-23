@@ -1,12 +1,11 @@
-const searchBar = document.getElementById('search-bar');
+const searchForm = document.getElementById('search-bar-container');
 const searchInput = document.getElementById("search-input");
 
-searchBar.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
+searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
     const searchTerm = searchInput.value.trim().toLowerCase();
 
     if (searchTerm) {
-      // แทนที่จะส่งไป Google เราจะแสดงเป็นกล่องข้อความแทน
       alert(`คุณกำลังค้นหาคำว่า: ${searchTerm}`);
     }
 });
