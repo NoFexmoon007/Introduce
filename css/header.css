@@ -185,7 +185,7 @@ header {
     }
 
     /* Search Bar Styling (โค้ดส่วนนี้ถูกต้องแล้ว) */
-    .search-bar-container {
+    .search-bar {
         display: flex;
         align-items: center;
 
@@ -281,16 +281,16 @@ header {
 
 
     /*search bar dark mode*/
-    .search-bar-container.dark-mode {
+    .search-bar.dark-mode {
         background: #222;
     }
 
-    .search-bar-container input.dark-mode {
+    .search-bar input.dark-mode {
         background: #333;
         color: #fafafa;
     }
 
-    .search-bar-container button.dark-mode {
+    .search-bar button.dark-mode {
         background: #444;
         color: #fafafa;
     }
