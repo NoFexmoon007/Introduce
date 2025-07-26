@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" href="../Introduce/picture/515672276_1315136376643411_4767108449727489919_n.jpg">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Introduce web</title>
 </head>
 
 <body>
     <header>
-        <h1>Narachai</h1>
+        <a href="IntroduceWeb.html" style="text-decoration: none;" id="header-title" class="header-title">
+            <h1>MIDNIGHT</h1>
+        </a>
         <nav class="header-nav">
             <ul>
                 <li><a href="/Introduce/Header/About.html" id="about">About</a></li>
@@ -25,7 +28,7 @@
 
         <!-- Search Bar -->
         <div class="search-bar" id="search-bar-container">
-            <form action="" id="search-form">
+            <form action="" id="search-form" class="search-form">
                 <input type="text" placeholder="Search..." id="search-input">
                 <button type="submit" id="search-button"> <i class="fas fa-search"></i></button>
             </form>
@@ -43,18 +46,85 @@
 
     </header>
 
-    <main id="content">
-        <section>
-            <h2>Welcome to My Website</h2>
-            <p>This is a simple introduction to my web development project.</p>
+    <main id="content" class="content">
+        <div class="side-page">
+            <article>
 
-        </section>
+            </article>
+        </div>
+        <div class="main-page">
+
+            <div class="head-post">
+                <form action="">
+                    <div class="post-input" id="post-input">
+                        <p>what do you think</p>
+                    </div>
+                    <div class="horizontal-line">
+                        <div class="put-img">
+                            <img src="/Introduce/picture/add_photo_alternate_24dp_0000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="add-photo-icon" class="put-img-icon">
+                            <p>Add Image</p>
+                        </div>
+                        <div class="put-pdf">
+                            <img src="/Introduce/picture/picture_as_pdf_24dp_0000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="add-pdf-icon" class="put-pdf-icon">
+                            <p>Add PDF</p>
+                        </div>
+                        <div class="put-pdf">
+                            <img src="/Introduce/picture/file_copy_24dp_0000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="add-pdf-icon" class="put-pdf-icon">
+                            <p>Add Document</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="post-item">
+                <div class="post-header">
+                    <div>
+                        <span class="post-content">MidnightCat</span>
+                        <span class="post-time">2 hours ago</span>
+                    </div>
+                </div>
+
+                <div class="post-content-item">
+                    <p>This is a post item.</p>
+
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-header">
+                    <div>
+                        <span class="post-content">NightOwl</span>
+                        <span class="post-time">1 hour ago </span>
+                    </div>
+                </div>
+                <div class="post-content-item">
+                    <p>This is another post item. rorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-header">
+                    <div>
+                        <span class="post-content">Dreamer</span>
+                        <span class="post-time">just now</span>
+                    </div>
+                </div>
+                <div class="post-content-item">
+                    <p>Yet another post item.</p>
+                </div>
+            </div>
+
     </main>
 
     <footer>
         <p>&copy; 2023 Narachai. All rights reserved.</p>
     </footer>
 
+    <script src="../Introduce/js/main.js"></script>
     <script src="../Introduce/js/search.js"></script>
     <script src="../Introduce/js/header.js"></script>
 </body>

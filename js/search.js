@@ -1,10 +1,10 @@
 (() => {
-    const searchForm = document.getElementById('search-bar-container');
-    const searchInput = document.getElementById("search-input");
+    const searchFormEl = document.getElementById('search-form');
+    const searchInputField = document.getElementById("search-input");
 
-    searchForm.addEventListener("submit", function(event) {
+    searchFormEl.addEventListener("submit", function(event) {
         event.preventDefault();
-        const searchTerm = searchInput.value.trim().toLowerCase();
+        const searchTerm = searchInputField.value.trim().toLowerCase();
 
         if (searchTerm) {
             alert(`คุณกำลังค้นหาคำว่า: ${searchTerm}`);
